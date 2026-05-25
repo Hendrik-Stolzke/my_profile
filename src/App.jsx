@@ -76,11 +76,11 @@ const COMPETENCIES = [
 
 // ─── BÜCHER ──────────────────────────────────────────────────────────────────
 const BOOKS = [
-  { title: "PyTorch für Deep Learning", author: "O'Reilly", spine: "#f97316" },
-  { title: "Think Human", author: "Whalen – Kundenzentriertes UX-Design", spine: "#2563eb" },
-  { title: "Machine Learning für Softwareentwickler", author: "Perrotta", spine: "#7c3aed" },
-  { title: "Zero to One", author: "Peter Thiel & Blake Masters", spine: "#0891b2" },
-  { title: "Der Allesverkäufer", author: "Brad Stone – Jeff Bezos & Amazon", spine: "#16a34a" },
+  { title: "PyTorch für Deep Learning", author: "O'Reilly", spine: "#C66A2B" }, // warmes Terracotta
+  { title: "Think Human", author: "Whalen – Kundenzentriertes UX-Design", spine: "#355C7D" }, // muted navy blue
+  { title: "Machine Learning für Softwareentwickler", author: "Perrotta", spine: "#5B4B8A" }, // deep violet
+  { title: "Zero to One", author: "Peter Thiel & Blake Masters", spine: "#2F6F6F" }, // dark teal
+  { title: "Der Allesverkäufer", author: "Brad Stone – Jeff Bezos & Amazon", spine: "#556B5D" }, // muted forest green
 ];
 
 // ─── PROJEKTE ─────────────────────────────────────────────────────────────────
@@ -215,10 +215,10 @@ function HomePage({ setActive }) {
 
         {/* Text */}
         <div style={{ flex: 1, minWidth: "240px" }}>
-          <div style={{ display: "inline-flex", alignItems: "center", gap: "7px", background: C.greenLight, border: `1px solid ${C.greenBorder}`, borderRadius: "20px", padding: "4px 13px", marginBottom: "16px" }}>
+          {/* <div style={{ display: "inline-flex", alignItems: "center", gap: "7px", background: C.greenLight, border: `1px solid ${C.greenBorder}`, borderRadius: "20px", padding: "4px 13px", marginBottom: "16px" }}>
             <span style={{ width: "7px", height: "7px", borderRadius: "50%", background: C.green, display: "inline-block" }} />
             <span style={{ fontSize: "12px", fontWeight: "600", color: C.green }}>Offen für Werkstudent & Praktikum</span>
-          </div>
+          </div> */}
 
           <h1 style={{ fontSize: "clamp(24px, 4.5vw, 36px)", fontWeight: "800", lineHeight: 1.15, marginBottom: "6px", letterSpacing: "-0.025em", color: C.text }}>
             Hendrik Stolzke
@@ -267,7 +267,7 @@ function HomePage({ setActive }) {
             <div style={{ fontSize: "12px", fontWeight: "700", color: C.text, marginBottom: "3px", lineHeight: 1.4 }}>{s.label}</div>
             <div style={{ fontSize: "11px", color: C.textSoft, lineHeight: 1.45 }}>{s.sub}</div>
             {s.hasBachelor && (
-              <a href="/bachelor.pdf" download
+              <a href="/thesis.pdf" download
                 style={{ marginTop: "10px", display: "inline-flex", alignItems: "center", gap: "5px", fontSize: "11px", fontWeight: "600", color: s.color, textDecoration: "none", padding: "4px 9px", borderRadius: "6px", background: s.colorLight, border: `1px solid ${s.colorBorder}`, transition: "opacity 0.15s" }}
                 onMouseEnter={(e) => e.currentTarget.style.opacity = "0.78"}
                 onMouseLeave={(e) => e.currentTarget.style.opacity = "1"}>
@@ -340,7 +340,7 @@ function HomePage({ setActive }) {
             </motion.div>
           ))}
           <div style={{ marginLeft: "24px", flex: 1, minWidth: "140px" }}>
-            <div style={{ fontSize: "12px", fontWeight: "700", color: C.textMid, marginBottom: "6px" }}>Aktuell auf dem Regal</div>
+            <div style={{ fontSize: "12px", fontWeight: "700", color: C.textMid, marginBottom: "6px" }}>Leseliste</div>
             <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
               {BOOKS.map((b, i) => (
                 <li key={i} style={{ fontSize: "11px", color: C.textSoft, marginBottom: "4px", display: "flex", alignItems: "flex-start", gap: "6px" }}>
@@ -391,7 +391,7 @@ function GitHubStrip() {
         </a>
       </div>
 
-      {/* Stats row */}
+      {/* Stats row
       {stats && !loading && (
         <div style={{ display: "flex", gap: "20px", marginBottom: "16px", flexWrap: "wrap" }}>
           {[
@@ -410,7 +410,7 @@ function GitHubStrip() {
             </div>
           )}
         </div>
-      )}
+      )} */}
 
       {/* Repos grid */}
       {loading ? (
