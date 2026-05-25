@@ -76,13 +76,12 @@ const COMPETENCIES = [
 
 // ─── BÜCHER ──────────────────────────────────────────────────────────────────
 const BOOKS = [
-  { title: "PyTorch für Deep Learning", author: "O'Reilly", spine: "#C66A2B" }, // warmes Terracotta
-  { title: "Think Human", author: "Whalen – Kundenzentriertes UX-Design", spine: "#355C7D" }, // muted navy blue
-  { title: "Machine Learning für Softwareentwickler", author: "Perrotta", spine: "#5B4B8A" }, // deep violet
-  { title: "Zero to One", author: "Peter Thiel & Blake Masters", spine: "#2F6F6F" }, // dark teal
-  { title: "Der Allesverkäufer", author: "Brad Stone – Jeff Bezos & Amazon", spine: "#556B5D" }, // muted forest green
+  { title: "PyTorch für Deep Learning", author: "O'Reilly", spine: "#C66A2B", buyUrl: "https://www.oreilly.com/library/view/pytorch-for-deep/9781098168520/" },
+  { title: "Think Human", author: "Whalen – Kundenzentriertes UX-Design", spine: "#355C7D", buyUrl: "https://www.rheinwerk-verlag.de/think-human/" },
+  { title: "Machine Learning für Softwareentwickler", author: "Perrotta", spine: "#5B4B8A", buyUrl: "https://www.oreilly.com/library/view/programming-machine-learning/9781492093626/" },
+  { title: "Zero to One", author: "Peter Thiel & Blake Masters", spine: "#2F6F6F", buyUrl: "https://www.penguinrandomhouse.com/books/234741/zero-to-one-by-peter-thiel-with-blake-masters/" },
+  { title: "Der Allesverkäufer", author: "Brad Stone – Jeff Bezos & Amazon", spine: "#556B5D", buyUrl: "https://www.campus.de/buecher-campus-verlag/wirtschaft-gesellschaft/management/der_allesverkaufer-6337.html" },
 ];
-
 // ─── PROJEKTE ─────────────────────────────────────────────────────────────────
 const TAG_COLORS = { Alle: "#7a84a3", Uni: "#2563eb", Hobby: "#16a34a", Hackathon: "#d97706" };
 const TAG_BG = { Uni: "#eff4ff", Hobby: "#f0fdf4", Hackathon: "#fffbeb" };
@@ -299,39 +298,46 @@ function HomePage({ setActive }) {
         <div style={{ display: "flex", gap: "0px", background: C.surface, border: `1px solid ${C.border}`, borderRadius: "14px", padding: "24px 28px", boxShadow: "0 1px 4px rgba(0,0,0,0.04)", alignItems: "flex-end", overflowX: "auto" }}>
           {BOOKS.map((b, i) => (
             <motion.div key={i} whileHover={{ y: -6, transition: { duration: 0.15 } }}
-              style={{ display: "flex", flexDirection: "column", alignItems: "center", marginRight: i < BOOKS.length - 1 ? "6px" : 0, cursor: "default", flexShrink: 0 }}>
-              {/* Book spine */}
-              <div style={{
-                width: "36px",
-                height: `${110 + (i % 3) * 16}px`,
-                background: b.spine,
-                borderRadius: "3px 2px 2px 3px",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                boxShadow: "2px 2px 6px rgba(0,0,0,0.15), inset -2px 0 4px rgba(0,0,0,0.12)",
-                position: "relative",
-                overflow: "hidden",
-              }}>
-                <span style={{
-                  writingMode: "vertical-rl",
-                  textOrientation: "mixed",
-                  transform: "rotate(180deg)",
-                  fontSize: "9px",
-                  fontWeight: "700",
-                  color: "rgba(255,255,255,0.9)",
-                  padding: "6px 2px",
-                  lineHeight: 1.3,
-                  textAlign: "center",
-                  maxHeight: "90%",
+              style={{ display: "flex", flexDirection: "column", alignItems: "center", marginRight: i < BOOKS.length - 1 ? "6px" : 0, flexShrink: 0 }}>
+
+              <a href={b.buyUrl} target="_blank" rel="noopener noreferrer"
+                title={`${b.title} kaufen`}
+                style={{ display: "block", textDecoration: "none", cursor: "pointer" }}>
+                <div style={{
+                  width: "36px",
+                  height: `${110 + (i % 3) * 16}px`,
+                  background: b.spine,
+                  borderRadius: "3px 2px 2px 3px",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  boxShadow: "2px 2px 6px rgba(0,0,0,0.15), inset -2px 0 4px rgba(0,0,0,0.12)",
+                  position: "relative",
                   overflow: "hidden",
-                }}>
-                  {b.title}
-                </span>
-                {/* Highlight */}
-                <div style={{ position: "absolute", top: 0, left: 0, width: "6px", height: "100%", background: "rgba(255,255,255,0.15)", borderRadius: "3px 0 0 3px" }} />
-              </div>
-              {/* Tooltip on hover handled by title below */}
+                  transition: "filter 0.15s",
+                }}
+                  onMouseEnter={e => e.currentTarget.style.filter = "brightness(1.15)"}
+                  onMouseLeave={e => e.currentTarget.style.filter = "brightness(1)"}
+                >
+                  <span style={{
+                    writingMode: "vertical-rl",
+                    textOrientation: "mixed",
+                    transform: "rotate(180deg)",
+                    fontSize: "9px",
+                    fontWeight: "700",
+                    color: "rgba(255,255,255,0.9)",
+                    padding: "6px 2px",
+                    lineHeight: 1.3,
+                    textAlign: "center",
+                    maxHeight: "90%",
+                    overflow: "hidden",
+                  }}>
+                    {b.title}
+                  </span>
+                  <div style={{ position: "absolute", top: 0, left: 0, width: "6px", height: "100%", background: "rgba(255,255,255,0.15)", borderRadius: "3px 0 0 3px" }} />
+                </div>
+              </a>
+
               <div style={{ marginTop: "8px", width: "36px", textAlign: "center" }}>
                 <div style={{ fontSize: "8px", color: C.textSoft, lineHeight: 1.3, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap", maxWidth: "60px", transform: "translateX(-12px)" }}>
                   {b.author.split("–")[0].trim()}
@@ -345,7 +351,14 @@ function HomePage({ setActive }) {
               {BOOKS.map((b, i) => (
                 <li key={i} style={{ fontSize: "11px", color: C.textSoft, marginBottom: "4px", display: "flex", alignItems: "flex-start", gap: "6px" }}>
                   <span style={{ width: "8px", height: "8px", borderRadius: "2px", background: b.spine, flexShrink: 0, marginTop: "2px", display: "inline-block" }} />
-                  <span><strong style={{ color: C.textMid }}>{b.title}</strong> · {b.author}</span>
+                  <span>
+                    <a href={b.buyUrl} target="_blank" rel="noopener noreferrer"
+                      style={{ fontWeight: "600", color: C.textMid, textDecoration: "none" }}
+                      onMouseEnter={e => e.currentTarget.style.color = C.accent}
+                      onMouseLeave={e => e.currentTarget.style.color = C.textMid}>
+                      {b.title}
+                    </a>{" "}· {b.author}
+                  </span>
                 </li>
               ))}
             </ul>
