@@ -559,16 +559,16 @@ function ProjectCard({ p, i, files, onUpload, onSelect, expanded }) {
             onMouseLeave={(e) => { e.currentTarget.style.borderColor = C.border; e.currentTarget.style.color = C.textMid; }}>
             <GitHubIcon size={12} /> GitHub
           </a>
-          <button onClick={onSelect}
+          {/* <button onClick={onSelect}
             style={{ display: "inline-flex", alignItems: "center", gap: "5px", fontSize: "11px", fontWeight: "600", color: files.length > 0 ? C.accent : C.textSoft, padding: "5px 10px", borderRadius: "7px", border: `1px solid ${files.length > 0 ? C.accentBorder : C.border}`, background: files.length > 0 ? C.accentLight : C.surfaceAlt, cursor: "pointer", transition: "all 0.15s" }}>
             📎 {files.length > 0 ? `${files.length} Datei${files.length > 1 ? "en" : ""}` : "Dateien"}
           </button>
           <button onClick={() => inputRef.current?.click()}
             style={{ display: "inline-flex", alignItems: "center", gap: "5px", fontSize: "11px", fontWeight: "600", color: C.textSoft, padding: "5px 10px", borderRadius: "7px", border: `1px solid ${C.border}`, background: C.surfaceAlt, cursor: "pointer" }}>
             <UploadIcon size={11} /> Upload
-          </button>
-          <input ref={inputRef} type="file" multiple accept="image/*,.pdf,.pptx,.ppt,.png,.jpg,.jpeg"
-            style={{ display: "none" }} onChange={(e) => onUpload(e.target.files)} />
+          </button> */}
+          {/* <input ref={inputRef} type="file" multiple accept="image/*,.pdf,.pptx,.ppt,.png,.jpg,.jpeg"
+            style={{ display: "none" }} onChange={(e) => onUpload(e.target.files)} /> */}
         </div>
 
         {/* File previews */}
