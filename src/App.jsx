@@ -261,7 +261,7 @@ function HomePage({ setActive }) {
           <motion.div key={i} initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 + i * 0.06 }}
             style={{ background: C.surface, border: `1px solid ${C.border}`, borderRadius: "12px", padding: "18px 20px", boxShadow: "0 1px 3px rgba(0,0,0,0.04)" }}>
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: "8px" }}>
-              <span style={{ fontSize: "11px" }}>{s.icon}</span>
+              <span style={{ fontSize: "18px" }}>{s.icon}</span>
               <span style={{ fontSize: "18px", fontWeight: "800", color: s.color }}>{s.value}</span>
             </div>
             <div style={{ fontSize: "12px", fontWeight: "700", color: C.text, marginBottom: "3px", lineHeight: 1.4 }}>{s.label}</div>
