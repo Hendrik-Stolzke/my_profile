@@ -489,7 +489,7 @@ function ProjectsPage() {
       <div style={{ background: C.surface, border: `1px solid ${C.border}`, borderRadius: "14px", overflow: "hidden", marginBottom: "24px", boxShadow: "0 1px 6px rgba(0,0,0,0.05)" }}>
         <div style={{ padding: "12px 20px", borderBottom: `1px solid ${C.border}`, display: "flex", alignItems: "center", gap: "8px", background: C.surfaceAlt }}>
           <span>💻</span>
-          <span style={{ fontSize: "13px", fontWeight: "700", color: C.text }}>Portfolio Präsentation</span>
+          <span style={{ fontSize: "13px", fontWeight: "700", color: C.text }}>Präsentation aller Projekte</span>
           <a href="/projects.pptx" download
             style={{ marginLeft: "auto", fontSize: "11px", color: C.accent, textDecoration: "none", padding: "3px 10px", borderRadius: "5px", border: `1px solid ${C.accentBorder}`, fontWeight: "600" }}>
             ↓ Download
@@ -499,7 +499,7 @@ function ProjectsPage() {
         <iframe
           src="https://view.officeapps.live.com/op/embed.aspx?src=https://hendrik-stolzke.vercel.app/projects.pptx"
           style={{ width: "100%", height: "500px", border: "none", display: "block" }}
-          title="Portfolio Präsentation"
+          title="Präsentation aller Projekte"
         />
       </div>
 
