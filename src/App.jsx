@@ -290,8 +290,6 @@ function HomePage({ setActive }) {
         </div>
       </div>
 
-      {/* GITHUB STRIP */}
-      <GitHubStrip />
       <div style={{ fontSize: "11px", fontWeight: "700", letterSpacing: "0.12em", textTransform: "uppercase", color: C.textSoft, marginBottom: "10px" }}>Bildung</div>
       {/* BACKGROUND KACHELN */}
       <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: "12px", marginBottom: "16px" }}>
@@ -331,6 +329,9 @@ function HomePage({ setActive }) {
         </div>
       </motion.div>
 
+      {/* GITHUB STRIP */}
+      <div style={{ fontSize: "11px", fontWeight: "700", letterSpacing: "0.12em", textTransform: "uppercase", color: C.textSoft, marginBottom: "10px" }}>Github Projekte</div>
+      <GitHubStrip />
       {/* BÜCHER */}
       <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5 }}>
         <div style={{ fontSize: "11px", fontWeight: "700", letterSpacing: "0.12em", textTransform: "uppercase", color: C.textSoft, marginBottom: "12px" }}>Lektüre</div>
@@ -657,25 +658,43 @@ function PptxPreview({ file }) {
 }
 // ─── CV ───────────────────────────────────────────────────────────────────────
 function CVPage() {
+  const [lang, setLang] = useState("de");
+
+  const cvFile = lang === "de" ? "/cv.pdf" : "/cv-en.pdf";
+  const title = lang === "de" ? "Lebenslauf" : "Resume";
+
   return (
     <motion.div initial={{ opacity: 0, y: 0 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -12 }} transition={{ duration: 0.35 }}>
       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", marginBottom: "18px", flexWrap: "wrap", gap: "12px" }}>
         <div>
           <div style={{ fontSize: "11px", fontWeight: "700", letterSpacing: "0.12em", textTransform: "uppercase", color: C.textSoft, marginBottom: "4px" }}>Dokument</div>
-          <h2 style={{ fontSize: "22px", fontWeight: "800", color: C.text, margin: 0 }}>Lebenslauf</h2>
+          <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
+            <h2 style={{ fontSize: "22px", fontWeight: "800", color: C.text, margin: 0 }}>{title}</h2>
+            <div style={{ display: "flex", background: C.surfaceAlt, border: `1px solid ${C.border}`, borderRadius: "8px", padding: "3px", gap: "2px" }}>
+              {["de", "en"].map((l) => (
+                <button key={l} onClick={() => setLang(l)} style={{
+                  padding: "4px 12px", borderRadius: "6px", border: "none", cursor: "pointer", fontSize: "12px", fontWeight: "700", transition: "all 0.15s",
+                  background: lang === l ? C.surface : "transparent",
+                  color: lang === l ? C.accent : C.textSoft,
+                  boxShadow: lang === l ? "0 1px 4px rgba(0,0,0,0.08)" : "none",
+                }}>
+                  {l === "de" ? "DE" : "EN"}
+                </button>
+              ))}
+            </div>
+          </div>
         </div>
-        <a href="/cv.pdf" download
+        <a href={cvFile} download
           style={{ background: C.accent, color: "#fff", textDecoration: "none", padding: "9px 20px", borderRadius: "9px", fontSize: "12px", fontWeight: "700", display: "inline-flex", alignItems: "center", gap: "7px", boxShadow: "0 2px 8px rgba(37,99,235,0.22)", transition: "opacity 0.15s" }}
           onMouseEnter={(e) => e.currentTarget.style.opacity = "0.88"}
           onMouseLeave={(e) => e.currentTarget.style.opacity = "1"}>
           <DownloadIcon size={13} /> PDF herunterladen
         </a>
       </div>
-
       <div style={{ background: C.surface, border: `1px solid ${C.border}`, borderRadius: "14px", overflow: "hidden", boxShadow: "0 1px 6px rgba(0,0,0,0.05)" }}>
         <iframe
-          src="/cv.pdf#toolbar=0&navpanes=0&scrollbar=1&view=FitH"
-          title="Lebenslauf"
+          src={`${cvFile}#toolbar=0&navpanes=0&scrollbar=1&view=FitH`}
+          title={title}
           style={{ width: "100%", height: "820px", border: "none", display: "block" }}
         />
       </div>
