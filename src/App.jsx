@@ -27,7 +27,7 @@ const STATS = [
     value: "M.Sc.",
     label: "Digital Business Engineering",
     sub: "Hochschule Reutlingen · laufend",
-    icon: "🎓",
+    icon: "🎓📈",
     color: C.accent,
     colorLight: C.accentLight,
     colorBorder: C.accentBorder,
@@ -37,8 +37,8 @@ const STATS = [
   {
     value: "B.Sc.",
     label: "Angewandte Künstliche Intelligenz",
-    sub: "Hochschule Reutlingen · abgeschlossen",
-    icon: "✅",
+    sub: "Hochschule Offenburg · abgeschlossen",
+    icon: "🎓✅",
     color: "#7c3aed",
     colorLight: "#f5f3ff",
     colorBorder: "#ddd6fe",
@@ -48,7 +48,7 @@ const STATS = [
     value: "FiSi",
     label: "Fachinformatiker Systemintegration",
     sub: "Ausbildung · abgeschlossen Jan. 2022",
-    icon: "💻",
+    icon: "💻✅",
     color: "#0891b2",
     colorLight: "#ecfeff",
     colorBorder: "#a5f3fc",
@@ -58,8 +58,8 @@ const STATS = [
     value: "Bosch",
     label: "Robert Bosch GmbH – KI im Industrieumfeld",
     sub: "Pflicht-, Freiwilliges Praktikum & Werkstudent · 2024–2025",
-    icon: "🏭",
-    color: "#d97706",
+    icon: "🏭✅",
+    color: "#ED0007",
     colorLight: "#fffbeb",
     colorBorder: "#fde68a",
     hasBachelor: false,
@@ -68,7 +68,7 @@ const STATS = [
 
 // ─── KOMPETENZEN ─────────────────────────────────────────────────────────────
 const COMPETENCIES = [
-  { icon: "🔬", title: "Angewandte KI", desc: "Deep Learning, Computer Vision und Reinforcement Learning – eingesetzt in produktionsnahen Projekten, nicht nur im Hörsaal." },
+  { icon: "🔬", title: "Angewandte KI", desc: "Deep Learning, Machine Learning und Data Engineering eingesetzt in produktionsnahen Projekten, nicht nur im Hörsaal." },
   { icon: "⚙️", title: "Industrie-Erfahrung", desc: "Drei Einsätze bei Robert Bosch GmbH mit Fokus auf KI-Anwendungsfelder im industriellen Umfeld, inklusive PANDA-Entwicklung." },
   { icon: "📐", title: "Technische Breite", desc: "Von Embedded Systems (Jetson, Raspberry Pi) über Backend (Python, Java) bis Mobile (Flutter) – durchgängiges technisches Profil." },
   { icon: "🎯", title: "Digital Business Engineering", desc: "M.Sc.-Studium verbindet KI-Kompetenz mit digitaler Transformation, Prozessdenken und unternehmerischer Perspektive." },
@@ -88,18 +88,18 @@ const TAG_BG = { Uni: "#eff4ff", Hobby: "#f0fdf4", Hackathon: "#fffbeb" };
 const TAG_BORDER = { Uni: "#bfcfff", Hobby: "#bbf7d0", Hackathon: "#fde68a" };
 
 const PROJECTS = [
-  { title: "PANDA", subtitle: "Production Anomaly Detection", desc: "AI-Dashboard zur Erkennung von Produktionsanomalien im industriellen Umfeld – entwickelt bei Robert Bosch GmbH.", tech: ["Python", "ML", "Dashboard", "Computer Vision"], accent: "#2563eb", tag: "Uni" },
+  { title: "PANDA", subtitle: "Production Anomaly Dashboard", desc: "AI-Dashboard zur Erkennung von Produktionsanomalien im industriellen Umfeld – entwickelt bei der Robert Bosch GmbH.", tech: ["Python", "ML", "Dashboard", "Computer Vision"], accent: "#2563eb", tag: "Uni" },
   { title: "YOLO Object Detection", subtitle: "Object Detection", desc: "Objekterkennung auf Bildern mit YOLO-Modellen und Label Studio Dataset.", tech: ["PyTorch", "YOLO", "OpenCV"], accent: "#7c3aed", tag: "Uni" },
   { title: "U-Net Medical Imaging", subtitle: "Medical Imaging", desc: "Segmentierung medizinischer Bilddaten mit Deep Learning.", tech: ["TensorFlow", "U-Net", "Image Segmentation"], accent: "#db2777", tag: "Uni" },
   { title: "ML Trading HMM", subtitle: "Time Series Analysis", desc: "Hidden Markov Model zur Analyse von Marktphasen und Trends.", tech: ["Python", "HMM", "Time Series"], accent: "#d97706", tag: "Uni" },
   { title: "Autonomes RC-Auto", subtitle: "Robotics & Embedded AI", desc: "Umbau eines RC-Autos zu einem autonomen Fahrzeug mit Lidar-Sensor, Kamera und PWM-Motorsteuerung.", tech: ["Python", "Jetson Orin Nano", "Lidar", "PWM", "Computer Vision"], accent: "#16a34a", tag: "Hobby" },
   { title: "Raspberry Pi 5 Wecker", subtitle: "Embedded & AI", desc: "Smarter Wecker mit Screen, Nachrichtenanzeige und KI-gestützter Aktienvorhersage/-empfehlung.", tech: ["Python", "Raspberry Pi 5", "PyQt GUI", "AI"], accent: "#0891b2", tag: "Hobby" },
-  { title: "Autonome Carrera Bahn", subtitle: "Reinforcement Learning", desc: "RL-gesteuerte Carrera-Bahn mit zwei wählbaren KI-Fahrern (PPO & DDPG).", tech: ["Python", "PPO", "DDPG", "Reinforcement Learning"], accent: "#ea580c", tag: "Hobby" },
+  { title: "Autonome Carrera Bahn", subtitle: "Reinforcement Learning", desc: "RL-gesteuerte Carrera-Bahn mit zwei wählbaren KI-Fahrern (PPO & DDPG).", tech: ["Python", "PPO", "DDPG", "Reinforcement Learning"], accent: "#ea580c", tag: "Uni" },
   { title: "KI Dating App", subtitle: "Mobile & Backend", desc: "Flutter-App mit Dell EMC Server-Anbindung für KI-gestütztes Matching und Chatfunktionen.", tech: ["Flutter", "Dart", "Server", "AI Matching"], accent: "#db2777", tag: "Hobby" },
-  { title: "Akkubohrer Projekt", subtitle: "Sensor & ML", desc: "Materialerkennung während einer Bohrung anhand von Strom-, Spannungs- und Soundsignalen mit GUI-Visualisierung.", tech: ["Python", "Sensoren", "tkinter", "Signalverarbeitung"], accent: "#b45309", tag: "Hobby" },
+  { title: "Akkubohrer Projekt", subtitle: "Sensor & ML", desc: "Materialerkennung während einer Bohrung anhand von Strom-, Spannungs- und Soundsignalen mit GUI-Visualisierung.", tech: ["Python", "Sensoren", "tkinter", "Signalverarbeitung"], accent: "#b45309", tag: "Uni" },
   { title: "Film/Serien Empfehlung", subtitle: "Recommendation System", desc: "Empfehlungssystem für Filme und Serien mit dem Apriori-Algorithmus und Association Mining.", tech: ["Python", "Apriori", "Association Mining"], accent: "#2563eb", tag: "Uni" },
   { title: "Kartenspiel Ramsch", subtitle: "Client-Server & AI", desc: "Textbasiertes Client-Server-Kartenspiel mit KI-Spieler in Java.", tech: ["Java", "Eclipse", "Client-Server", "KI-Spieler"], accent: "#16a34a", tag: "Uni" },
-  { title: "Hackathon Zeitreihe", subtitle: "Predictive Analytics", desc: "Untersuchung und Vorhersage einer Zeitreihe mit dem Random Forest.", tech: ["Python", "Random Forest", "Zeitreihe"], accent: "#d97706", tag: "Hackathon" },
+  { title: "Hackathon Zeitreihe", subtitle: "Predictive Analytics", desc: "Untersuchung und Vorhersage einer Zeitreihe mit dem Random Forest.", tech: ["Python", "Random Forest", "Zeitreihe"], accent: "#d97706", tag: "Uni" },
   { title: "Heart Attack Prediction", subtitle: "Medical AI", desc: "Analyse medizinischer Daten und Vorhersage eines Herzinfarkts mit Gaussian Naive Bayes.", tech: ["Python", "Naive Bayes", "Medical Data"], accent: "#dc2626", tag: "Uni" },
   { title: "Buch/Film Verwaltung", subtitle: "Java Desktop App", desc: "Verwaltungssoftware mit Java Swing GUI, Datenbankanbindung via JDBC und SQL-Abfragen.", tech: ["Java", "Swing GUI", "JDBC", "SQL", "Apache NetBeans"], accent: "#0891b2", tag: "Uni" },
 ];
@@ -185,7 +185,7 @@ export default function Portfolio() {
 
         {/* FOOTER */}
         <div style={{ marginTop: "80px", paddingBottom: "32px", borderTop: `1px solid ${C.border}`, paddingTop: "20px", display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "8px" }}>
-          <span style={{ fontSize: "12px", color: C.textSoft }}>© 2026 Hendrik Stolzke</span>
+          <span style={{ fontSize: "12px", color: C.textSoft }}>2026 Hendrik Stolzke</span>
           <span style={{ fontSize: "12px", color: C.textSoft }}>Student · M.Sc. Digital Business Engineering</span>
         </div>
       </div>
@@ -230,8 +230,7 @@ function HomePage({ setActive }) {
             Ich verbinde fundiertes KI-Wissen mit unternehmerischem Denken –{" "}
             <strong style={{ color: C.text }}>Computer Vision</strong>,{" "}
             <strong style={{ color: C.text }}>Deep Learning</strong> und{" "}
-            <strong style={{ color: C.text }}>Full-Stack-Entwicklung</strong>.{" "}
-            14+ abgeschlossene Projekte, mehrfache Praxiserfahrung bei Robert Bosch GmbH.
+            <strong style={{ color: C.text }}>Softwareentwicklung</strong>.{" "}
           </p>
 
           <div style={{ display: "flex", gap: "10px", flexWrap: "wrap" }}>
@@ -253,7 +252,7 @@ function HomePage({ setActive }) {
 
       {/* GITHUB STRIP */}
       <GitHubStrip />
-
+      <div style={{ fontSize: "11px", fontWeight: "700", letterSpacing: "0.12em", textTransform: "uppercase", color: C.textSoft, marginBottom: "10px" }}>Bildung</div>
       {/* BACKGROUND KACHELN */}
       <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: "12px", marginBottom: "16px" }}>
         {STATS.map((s, i) => (
@@ -403,28 +402,6 @@ function GitHubStrip() {
           Profil ansehen <ExternalIcon size={12} />
         </a>
       </div>
-
-      {/* Stats row
-      {stats && !loading && (
-        <div style={{ display: "flex", gap: "20px", marginBottom: "16px", flexWrap: "wrap" }}>
-          {[
-            { label: "Repositories", value: stats.public_repos },
-            { label: "Follower", value: stats.followers },
-            { label: "Following", value: stats.following },
-          ].map((s, i) => (
-            <div key={i} style={{ textAlign: "center" }}>
-              <div style={{ fontSize: "18px", fontWeight: "800", color: C.accent }}>{s.value}</div>
-              <div style={{ fontSize: "11px", color: C.textSoft }}>{s.label}</div>
-            </div>
-          ))}
-          {stats.bio && (
-            <div style={{ fontSize: "12px", color: C.textMid, alignSelf: "center", fontStyle: "italic", borderLeft: `2px solid ${C.border}`, paddingLeft: "16px" }}>
-              {stats.bio}
-            </div>
-          )}
-        </div>
-      )} */}
-
       {/* Repos grid */}
       {loading ? (
         <div style={{ fontSize: "12px", color: C.textSoft, padding: "8px 0" }}>Lade Repositories…</div>
@@ -466,7 +443,7 @@ function ProjectsPage() {
   const [selected, setSelected] = useState(null);
   const [projectFiles, setProjectFiles] = useState({});
 
-  const tags = ["Alle", "Uni", "Hobby", "Hackathon"];
+  const tags = ["Alle", "Uni", "Hobby"];
   const visible = filter === "Alle" ? PROJECTS : PROJECTS.filter((p) => p.tag === filter);
 
   function handleFileUpload(projectTitle, files) {
@@ -484,24 +461,21 @@ function ProjectsPage() {
 
   return (
     <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -12 }} transition={{ duration: 0.35 }}>
-      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", flexWrap: "wrap", gap: "12px", marginBottom: "22px" }}>
-        <div>
-          <div style={{ fontSize: "11px", fontWeight: "700", letterSpacing: "0.12em", textTransform: "uppercase", color: C.textSoft, marginBottom: "4px" }}>Portfolio</div>
-          <h2 style={{ fontSize: "22px", fontWeight: "800", color: C.text, margin: 0 }}>Projekte ({visible.length})</h2>
+      {/* ── PPTX SHOWCASE ── */}
+      <div style={{ background: C.surface, border: `1px solid ${C.border}`, borderRadius: "14px", overflow: "hidden", marginBottom: "24px", boxShadow: "0 1px 6px rgba(0,0,0,0.05)" }}>
+        <div style={{ padding: "12px 20px", borderBottom: `1px solid ${C.border}`, display: "flex", alignItems: "center", gap: "8px", background: C.surfaceAlt }}>
+          <span>📊</span>
+          <span style={{ fontSize: "13px", fontWeight: "700", color: C.text }}>Portfolio Präsentation</span>
+          <a href="/projects.pptx" download
+            style={{ marginLeft: "auto", fontSize: "11px", color: C.accent, textDecoration: "none", padding: "3px 10px", borderRadius: "5px", border: `1px solid ${C.accentBorder}`, fontWeight: "600" }}>
+            ↓ Download
+          </a>
         </div>
-        <div style={{ display: "flex", gap: "6px", flexWrap: "wrap" }}>
-          {tags.map((t) => (
-            <button key={t} onClick={() => setFilter(t)} style={{
-              background: filter === t ? (t === "Alle" ? C.surfaceAlt : TAG_BG[t]) : "transparent",
-              border: `1px solid ${filter === t ? (t === "Alle" ? C.borderStrong : TAG_BORDER[t]) : C.border}`,
-              color: filter === t ? TAG_COLORS[t] : C.textSoft,
-              padding: "5px 14px", borderRadius: "8px", cursor: "pointer",
-              fontSize: "12px", fontWeight: "600", transition: "all 0.15s",
-            }}>
-              {t}
-            </button>
-          ))}
-        </div>
+        <iframe
+          src="https://view.officeapps.live.com/op/embed.aspx?src=https://hendrik-stolzke.vercel.app/projects.pptx"
+          style={{ width: "100%", height: "500px", border: "none", display: "block" }}
+          title="Portfolio Präsentation"
+        />
       </div>
 
       <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))", gap: "12px" }}>
@@ -525,22 +499,28 @@ function ProjectCard({ p, i, files, onUpload, onSelect, expanded }) {
     if (f.type.startsWith("image/")) return (
       <img src={f.url} alt={f.name} style={{ width: "100%", maxHeight: "200px", objectFit: "contain", borderRadius: "6px", background: C.surfaceAlt }} />
     );
-    if (f.type === "application/pdf" || f.type.includes("presentation") || f.name.endsWith(".pptx")) return (
+
+    // PPTX zuerst prüfen, bevor der generische PDF/presentation-Block greift
+    if (f.name.endsWith(".pptx") || f.type.includes("presentation")) return (
+      <PptxPreview file={f} />
+    );
+
+    if (f.type === "application/pdf") return (
       <div style={{ padding: "10px", background: C.surfaceAlt, borderRadius: "6px", fontSize: "12px", color: C.textMid, display: "flex", alignItems: "center", gap: "8px" }}>
-        <span style={{ fontSize: "20px" }}>{f.name.endsWith(".pptx") ? "📊" : "📄"}</span>
+        <span style={{ fontSize: "20px" }}>📄</span>
         <div>
           <div style={{ fontWeight: "600" }}>{f.name}</div>
           <a href={f.url} download={f.name} style={{ color: C.accent, fontSize: "11px", textDecoration: "none" }}>Herunterladen</a>
         </div>
       </div>
     );
+
     return (
       <div style={{ padding: "10px", background: C.surfaceAlt, borderRadius: "6px", fontSize: "12px", color: C.textMid }}>
         📎 {f.name} · <a href={f.url} download={f.name} style={{ color: C.accent, textDecoration: "none" }}>Download</a>
       </div>
     );
   }
-
   return (
     <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.03 }}
       style={{ background: C.surface, border: `1px solid ${expanded ? C.accentBorder : C.border}`, borderRadius: "12px", overflow: "hidden", boxShadow: expanded ? "0 4px 16px rgba(37,99,235,0.08)" : "0 1px 3px rgba(0,0,0,0.04)", transition: "box-shadow 0.15s, border-color 0.15s" }}
@@ -572,16 +552,6 @@ function ProjectCard({ p, i, files, onUpload, onSelect, expanded }) {
             onMouseLeave={(e) => { e.currentTarget.style.borderColor = C.border; e.currentTarget.style.color = C.textMid; }}>
             <GitHubIcon size={12} /> GitHub
           </a>
-          {/* <button onClick={onSelect}
-            style={{ display: "inline-flex", alignItems: "center", gap: "5px", fontSize: "11px", fontWeight: "600", color: files.length > 0 ? C.accent : C.textSoft, padding: "5px 10px", borderRadius: "7px", border: `1px solid ${files.length > 0 ? C.accentBorder : C.border}`, background: files.length > 0 ? C.accentLight : C.surfaceAlt, cursor: "pointer", transition: "all 0.15s" }}>
-            📎 {files.length > 0 ? `${files.length} Datei${files.length > 1 ? "en" : ""}` : "Dateien"}
-          </button>
-          <button onClick={() => inputRef.current?.click()}
-            style={{ display: "inline-flex", alignItems: "center", gap: "5px", fontSize: "11px", fontWeight: "600", color: C.textSoft, padding: "5px 10px", borderRadius: "7px", border: `1px solid ${C.border}`, background: C.surfaceAlt, cursor: "pointer" }}>
-            <UploadIcon size={11} /> Upload
-          </button> */}
-          {/* <input ref={inputRef} type="file" multiple accept="image/*,.pdf,.pptx,.ppt,.png,.jpg,.jpeg"
-            style={{ display: "none" }} onChange={(e) => onUpload(e.target.files)} /> */}
         </div>
 
         {/* File previews */}
@@ -597,7 +567,48 @@ function ProjectCard({ p, i, files, onUpload, onSelect, expanded }) {
     </motion.div>
   );
 }
+function PptxPreview({ file }) {
+  const containerRef = useRef();
+  const [loaded, setLoaded] = useState(false);
+  const [error, setError] = useState(false);
 
+  useEffect(() => {
+    if (!containerRef.current || typeof PPTX === "undefined") {
+      setError(true);
+      return;
+    }
+    try {
+      const pptx = new PPTX();
+      pptx.fileUrl = file.url;
+      pptx.renderFile(containerRef.current);
+      setLoaded(true);
+    } catch {
+      setError(true);
+    }
+  }, [file.url]);
+
+  return (
+    <div style={{ borderRadius: "8px", overflow: "hidden", border: `1px solid ${C.border}` }}>
+      {/* Titelzeile */}
+      <div style={{ padding: "8px 12px", display: "flex", alignItems: "center", gap: "8px", background: C.surfaceAlt, borderBottom: `1px solid ${C.border}` }}>
+        <span>📊</span>
+        <span style={{ fontSize: "12px", fontWeight: "600", color: C.textMid, flex: 1 }}>{file.name}</span>
+        <a href={file.url} download={file.name}
+          style={{ fontSize: "11px", color: C.accent, textDecoration: "none", padding: "3px 8px", borderRadius: "5px", border: `1px solid ${C.accentBorder}` }}>
+          ↓ Download
+        </a>
+      </div>
+
+      {error ? (
+        <div style={{ padding: "16px", fontSize: "12px", color: C.textSoft, textAlign: "center" }}>
+          Vorschau nicht verfügbar · <a href={file.url} download={file.name} style={{ color: C.accent, textDecoration: "none" }}>Herunterladen</a>
+        </div>
+      ) : (
+        <div ref={containerRef} style={{ width: "100%", minHeight: "320px", background: C.surface }} />
+      )}
+    </div>
+  );
+}
 // ─── CV ───────────────────────────────────────────────────────────────────────
 function CVPage() {
   return (
