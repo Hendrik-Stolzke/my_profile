@@ -26,7 +26,7 @@ const STATS = [
   {
     value: "M.Sc.",
     label: "Digital Business Engineering",
-    sub: "Hochschule Reutlingen · laufend",
+    sub: "Hochschule Reutlingen · laufend März 2026 - voraussichtlich September 2027",
     icon: "🎓📈",
     color: C.accent,
     colorLight: C.accentLight,
@@ -37,7 +37,7 @@ const STATS = [
   {
     value: "B.Sc.",
     label: "Angewandte Künstliche Intelligenz",
-    sub: "Hochschule Offenburg · abgeschlossen",
+    sub: "Hochschule Offenburg · abgeschlossen Feb. 2026",
     icon: "🎓✅",
     color: "#7c3aed",
     colorLight: "#f5f3ff",
@@ -47,7 +47,7 @@ const STATS = [
   {
     value: "FiSi",
     label: "Fachinformatiker Systemintegration",
-    sub: "Ausbildung · abgeschlossen Jan. 2022",
+    sub: "Ferdinand-von-Steinbeisschule Reutlingen · abgeschlossen Jan. 2022",
     icon: "💻✅",
     color: "#0891b2",
     colorLight: "#ecfeff",
@@ -68,10 +68,10 @@ const STATS = [
 
 // ─── KOMPETENZEN ─────────────────────────────────────────────────────────────
 const COMPETENCIES = [
-  { icon: "🔬", title: "Angewandte KI", desc: "Deep Learning, Machine Learning und Data Engineering eingesetzt in produktionsnahen Projekten, nicht nur im Hörsaal." },
-  { icon: "⚙️", title: "Industrie-Erfahrung", desc: "Drei Einsätze bei Robert Bosch GmbH mit Fokus auf KI-Anwendungsfelder im industriellen Umfeld, inklusive PANDA-Entwicklung." },
-  { icon: "📐", title: "Technische Breite", desc: "Von Embedded Systems (Jetson, Raspberry Pi) über Backend (Python, Java) bis Mobile (Flutter) – durchgängiges technisches Profil." },
-  { icon: "🎯", title: "Digital Business Engineering", desc: "M.Sc.-Studium verbindet KI-Kompetenz mit digitaler Transformation, Prozessdenken und unternehmerischer Perspektive." },
+  { icon: "🧠", title: "Angewandte KI", desc: "Computer Vision, Deep Learning, Reinforcement Learning, NLP und Machine Learning - eingesetzt in Projekten." },
+  { icon: "⚙️", title: "Industrie-Erfahrung", desc: "Software Entwicklung in der Robert Bosch GmbH mit Fokus auf IT- und KI-Anwendungsfelder." },
+  { icon: "📐", title: "Technische Breite", desc: "Von Embedded Systems (Jetson, Raspberry Pi) über Backend (Python, Java, SQL, etc.) bis Mobile (Flutter Dart, React) und Linux Server." },
+  { icon: "🎯", title: "Digital Business", desc: "M.Sc.-Studium verbindet KI-Kompetenz mit digitaler Transformation und unternehmerischer Perspektive." },
 ];
 
 // ─── BÜCHER ──────────────────────────────────────────────────────────────────
@@ -88,19 +88,19 @@ const TAG_BG = { Uni: "#eff4ff", Hobby: "#f0fdf4", Hackathon: "#fffbeb" };
 const TAG_BORDER = { Uni: "#bfcfff", Hobby: "#bbf7d0", Hackathon: "#fde68a" };
 
 const PROJECTS = [
-  { title: "PANDA", subtitle: "Production Anomaly Dashboard", desc: "AI-Dashboard zur Erkennung von Produktionsanomalien im industriellen Umfeld – entwickelt bei der Robert Bosch GmbH.", tech: ["Python", "ML", "Dashboard", "Computer Vision"], accent: "#2563eb", tag: "Uni" },
+  { title: "PANDA", subtitle: "Production Anomaly Dashboard", desc: "AI-Dashboard zur Erkennung von Produktionsanomalien im industriellen Umfeld – entwickelt im Praktikum bei der Robert Bosch GmbH.", tech: ["Python", "ML", "Dashboard", "Computer Vision"], accent: "#2563eb", tag: "Uni" },
   { title: "YOLO Object Detection", subtitle: "Object Detection", desc: "Objekterkennung auf Bildern mit YOLO-Modellen und Label Studio Dataset.", tech: ["PyTorch", "YOLO", "OpenCV"], accent: "#7c3aed", tag: "Uni" },
   { title: "U-Net Medical Imaging", subtitle: "Medical Imaging", desc: "Segmentierung medizinischer Bilddaten mit Deep Learning.", tech: ["TensorFlow", "U-Net", "Image Segmentation"], accent: "#db2777", tag: "Uni" },
   { title: "ML Trading HMM", subtitle: "Time Series Analysis", desc: "Hidden Markov Model zur Analyse von Marktphasen und Trends.", tech: ["Python", "HMM", "Time Series"], accent: "#d97706", tag: "Uni" },
   { title: "Autonomes RC-Auto", subtitle: "Robotics & Embedded AI", desc: "Umbau eines RC-Autos zu einem autonomen Fahrzeug mit Lidar-Sensor, Kamera und PWM-Motorsteuerung.", tech: ["Python", "Jetson Orin Nano", "Lidar", "PWM", "Computer Vision"], accent: "#16a34a", tag: "Hobby" },
-  { title: "Raspberry Pi 5 Wecker", subtitle: "Embedded & AI", desc: "Smarter Wecker mit Screen, Nachrichtenanzeige und KI-gestützter Aktienvorhersage/-empfehlung.", tech: ["Python", "Raspberry Pi 5", "PyQt GUI", "AI"], accent: "#0891b2", tag: "Hobby" },
+  { title: "Raspberry Pi 5 Wecker", subtitle: "Embedded & AI", desc: "Smarter Wecker mit Screen, Nachrichtenanzeige und KI-gestützter Aktienvorhersage/-empfehlung.", tech: ["Python", "Raspberry Pi 5", "PyQt GUI", "AI"], accent: "#0891b2", tag: "Hobby", github: "Hendrik-Stolzke/Wolf-Python-UI-Wecker" },
   { title: "Autonome Carrera Bahn", subtitle: "Reinforcement Learning", desc: "RL-gesteuerte Carrera-Bahn mit zwei wählbaren KI-Fahrern (PPO & DDPG).", tech: ["Python", "PPO", "DDPG", "Reinforcement Learning"], accent: "#ea580c", tag: "Uni" },
   { title: "KI Dating App", subtitle: "Mobile & Backend", desc: "Flutter-App mit Dell EMC Server-Anbindung für KI-gestütztes Matching und Chatfunktionen.", tech: ["Flutter", "Dart", "Server", "AI Matching"], accent: "#db2777", tag: "Hobby" },
-  { title: "Akkubohrer Projekt", subtitle: "Sensor & ML", desc: "Materialerkennung während einer Bohrung anhand von Strom-, Spannungs- und Soundsignalen mit GUI-Visualisierung.", tech: ["Python", "Sensoren", "tkinter", "Signalverarbeitung"], accent: "#b45309", tag: "Uni" },
+  { title: "Akkubohrer Projekt", subtitle: "Sensor & ML", desc: "Materialerkennung während einer Bohrung anhand von Strom-, Spannungs- und Soundsignalen mit GUI-Visualisierung.", tech: ["Python", "Sensoren", "tkinter", "Signalverarbeitung"], accent: "#b45309", tag: "Uni", github: "Hendrik-Stolzke/Material-Erkennung-ML" },
   { title: "Film/Serien Empfehlung", subtitle: "Recommendation System", desc: "Empfehlungssystem für Filme und Serien mit dem Apriori-Algorithmus und Association Mining.", tech: ["Python", "Apriori", "Association Mining"], accent: "#2563eb", tag: "Uni" },
   { title: "Kartenspiel Ramsch", subtitle: "Client-Server & AI", desc: "Textbasiertes Client-Server-Kartenspiel mit KI-Spieler in Java.", tech: ["Java", "Eclipse", "Client-Server", "KI-Spieler"], accent: "#16a34a", tag: "Uni" },
   { title: "Hackathon Zeitreihe", subtitle: "Predictive Analytics", desc: "Untersuchung und Vorhersage einer Zeitreihe mit dem Random Forest.", tech: ["Python", "Random Forest", "Zeitreihe"], accent: "#d97706", tag: "Uni" },
-  { title: "Heart Attack Prediction", subtitle: "Medical AI", desc: "Analyse medizinischer Daten und Vorhersage eines Herzinfarkts mit Gaussian Naive Bayes.", tech: ["Python", "Naive Bayes", "Medical Data"], accent: "#dc2626", tag: "Uni" },
+  { title: "Heart Attack Prediction", subtitle: "Medical AI", desc: "Analyse medizinischer Daten und Vorhersage eines Herzinfarkts mit Gaussian Naive Bayes.", tech: ["Python", "Naive Bayes", "Medical Data"], accent: "#dc2626", tag: "Uni", github: "Hendrik-Stolzke/ML-Heart-Attack" },
   { title: "Buch/Film Verwaltung", subtitle: "Java Desktop App", desc: "Verwaltungssoftware mit Java Swing GUI, Datenbankanbindung via JDBC und SQL-Abfragen.", tech: ["Java", "Swing GUI", "JDBC", "SQL", "Apache NetBeans"], accent: "#0891b2", tag: "Uni" },
 ];
 
@@ -163,7 +163,7 @@ export default function Portfolio() {
             <span style={{ fontSize: "14px", fontWeight: "700", color: C.text }}>Hendrik Stolzke</span>
           </motion.div>
           <div style={{ display: "flex", gap: "4px" }}>
-            {["Home", "Projekte", "CV"].map((item) => (
+            {["Home", "Projekte", "Lebenslauf"].map((item) => (
               <button key={item} onClick={() => setActive(item)} style={{
                 background: active === item ? C.accentLight : "transparent",
                 border: `1px solid ${active === item ? C.accentBorder : "transparent"}`,
@@ -180,7 +180,7 @@ export default function Portfolio() {
         <AnimatePresence mode="wait">
           {active === "Home" && <HomePage key="home" setActive={setActive} />}
           {active === "Projekte" && <ProjectsPage key="projects" />}
-          {active === "CV" && <CVPage key="cv" />}
+          {active === "Lebenslauf" && <CVPage key="lebenslauf" />}
         </AnimatePresence>
 
         {/* FOOTER */}
@@ -201,7 +201,7 @@ function HomePage({ setActive }) {
       {/* HERO CARD */}
       <div style={{ background: C.surface, border: `1px solid ${C.border}`, borderRadius: "16px", padding: "36px 40px", marginBottom: "16px", display: "flex", gap: "36px", alignItems: "flex-start", flexWrap: "wrap", boxShadow: "0 1px 6px rgba(0,0,0,0.05)" }}>
         {/* Avatar */}
-        <div style={{ flexShrink: 0, width: "200px", height: "200px", borderRadius: "12px", overflow: "hidden", border: `1px solid ${C.border}`, background: C.surfaceAlt, display: "flex", alignItems: "center", justifyContent: "center" }}>
+        <div style={{ flexShrink: 0, width: "200px", height: "287px", borderRadius: "12px", overflow: "hidden", border: `1px solid ${C.border}`, background: C.surfaceAlt, display: "flex", alignItems: "center", justifyContent: "center" }}>
           <img src="/profile.png" alt="Hendrik Stolzke"
             style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
             onError={(e) => {
@@ -214,38 +214,78 @@ function HomePage({ setActive }) {
 
         {/* Text */}
         <div style={{ flex: 1, minWidth: "240px" }}>
-          {/* <div style={{ display: "inline-flex", alignItems: "center", gap: "7px", background: C.greenLight, border: `1px solid ${C.greenBorder}`, borderRadius: "20px", padding: "4px 13px", marginBottom: "16px" }}>
-            <span style={{ width: "7px", height: "7px", borderRadius: "50%", background: C.green, display: "inline-block" }} />
-            <span style={{ fontSize: "12px", fontWeight: "600", color: C.green }}>Offen für Werkstudent & Praktikum</span>
-          </div> */}
 
           <h1 style={{ fontSize: "clamp(24px, 4.5vw, 36px)", fontWeight: "800", lineHeight: 1.15, marginBottom: "6px", letterSpacing: "-0.025em", color: C.text }}>
             Hendrik Stolzke
           </h1>
-          <div style={{ fontSize: "14px", fontWeight: "600", color: C.accent, marginBottom: "14px" }}>
-            M.Sc. Digital Business Engineering &nbsp;·&nbsp; B.Sc. Angewandte KI ✓
+          <div style={{ fontSize: "14px", fontWeight: "600", color: "#1e64e7", marginBottom: "14px" }}>
+            <a href="https://www.hhz.de/studium/master/digital-business-engineering" target="_blank" rel="noopener noreferrer"
+              style={{ color: "#1e64e7", textDecoration: "none", borderBottom: "1px solid rgba(30,100,231,0.3)", transition: "border-color 0.15s" }}
+              onMouseEnter={e => e.currentTarget.style.borderBottom = "1px solid #1e64e7"}
+              onMouseLeave={e => e.currentTarget.style.borderBottom = "1px solid rgba(30,100,231,0.3)"}>
+              M.Sc. Digital Business Engineering
+            </a>
+            &nbsp;·&nbsp;
+            <a href="https://www.hs-offenburg.de/studium/bachelor/angewandte-kuenstliche-intelligenz" target="_blank" rel="noopener noreferrer"
+              style={{ color: "#1e64e7", textDecoration: "none", borderBottom: "1px solid rgba(30,100,231,0.3)", transition: "border-color 0.15s" }}
+              onMouseEnter={e => e.currentTarget.style.borderBottom = "1px solid #1e64e7"}
+              onMouseLeave={e => e.currentTarget.style.borderBottom = "1px solid rgba(30,100,231,0.3)"}>
+              B.Sc. Angewandte KI ✓
+            </a>
           </div>
 
-          <p style={{ fontSize: "14px", color: C.textMid, lineHeight: 1.75, maxWidth: "500px", marginBottom: "24px" }}>
-            Ich verbinde fundiertes KI-Wissen mit unternehmerischem Denken –{" "}
-            <strong style={{ color: C.text }}>Computer Vision</strong>,{" "}
-            <strong style={{ color: C.text }}>Deep Learning</strong> und{" "}
-            <strong style={{ color: C.text }}>Softwareentwicklung</strong>.{" "}
+          <p
+            style={{
+              fontSize: "14px",
+              color: C.textMid,
+              lineHeight: 2,
+              maxWidth: "1500px",
+              marginBottom: "24px",
+              textAlign: "left",
+            }}
+          >
+            Als Student des{" "}
+            <span style={{ color: C.primary, fontWeight: 600 }}>
+              Digital Business Engineering
+            </span>{" "}
+            und Bachelorand der{" "}
+            <span style={{ color: C.secondary, fontWeight: 600 }}>
+              Angewandten Künstlichen Intelligenz
+            </span>{" "}
+            verbinde ich wissenschaftliches Wissen mit praktischer Erfahrung. Mich
+            begeistert es, reale Herausforderungen mit{" "}
+            <span style={{ color: C.primary, fontWeight: 600 }}>
+              intelligenten Lösungen
+            </span>{" "}
+            zu lösen und Systeme kontinuierlich weiterzuentwickeln.
           </p>
 
           <div style={{ display: "flex", gap: "10px", flexWrap: "wrap" }}>
+
             <button onClick={() => setActive("Projekte")}
-              style={{ background: C.accent, color: "#fff", border: "none", padding: "10px 22px", borderRadius: "9px", fontSize: "13px", fontWeight: "700", cursor: "pointer", boxShadow: "0 2px 8px rgba(37,99,235,0.22)", transition: "opacity 0.15s" }}
-              onMouseEnter={(e) => e.currentTarget.style.opacity = "0.88"}
-              onMouseLeave={(e) => e.currentTarget.style.opacity = "1"}>
-              Projekte ansehen →
+              style={{ minWidth: "160px", justifyContent: "center", background: `linear-gradient(135deg, ${C.accent}, #1d4ed8)`, color: "#fff", border: "none", padding: "11px 24px", borderRadius: "10px", fontSize: "13px", fontWeight: "700", cursor: "pointer", boxShadow: "0 4px 14px rgba(37,99,235,0.35)", transition: "all 0.2s", display: "inline-flex", alignItems: "center", gap: "8px" }}
+              onMouseEnter={(e) => { e.currentTarget.style.transform = "translateY(-1px)"; e.currentTarget.style.boxShadow = "0 6px 20px rgba(37,99,235,0.45)"; }}
+              onMouseLeave={(e) => { e.currentTarget.style.transform = "translateY(0)"; e.currentTarget.style.boxShadow = "0 4px 14px rgba(37,99,235,0.35)"; }}>
+              <span>Projekte</span>
+              <span style={{ fontSize: "16px", lineHeight: 1 }}>→</span>
             </button>
+
+            <button onClick={() => setActive("Lebenslauf")}
+              style={{ minWidth: "160px", justifyContent: "center", background: "transparent", color: C.textMid, border: `1.5px solid ${C.border}`, padding: "11px 24px", borderRadius: "10px", fontSize: "13px", fontWeight: "600", cursor: "pointer", transition: "all 0.2s", display: "inline-flex", alignItems: "center", gap: "8px" }}
+              onMouseEnter={(e) => { e.currentTarget.style.borderColor = C.accent; e.currentTarget.style.color = C.accent; e.currentTarget.style.background = C.accentLight; }}
+              onMouseLeave={(e) => { e.currentTarget.style.borderColor = C.border; e.currentTarget.style.color = C.textMid; e.currentTarget.style.background = "transparent"; }}>
+              <span>Lebenslauf</span>
+              <span style={{ fontSize: "16px", lineHeight: 1 }}>→</span>
+            </button>
+
             <a href={`https://github.com/${GITHUB_USER}`} target="_blank" rel="noopener noreferrer"
-              style={{ display: "inline-flex", alignItems: "center", gap: "7px", background: C.surface, color: C.textMid, border: `1.5px solid ${C.border}`, padding: "10px 18px", borderRadius: "9px", fontSize: "13px", fontWeight: "600", textDecoration: "none", transition: "border-color 0.15s, color 0.15s" }}
-              onMouseEnter={(e) => { e.currentTarget.style.borderColor = C.accent; e.currentTarget.style.color = C.accent; }}
-              onMouseLeave={(e) => { e.currentTarget.style.borderColor = C.border; e.currentTarget.style.color = C.textMid; }}>
+              style={{ minWidth: "160px", justifyContent: "center", display: "inline-flex", alignItems: "center", gap: "7px", background: C.text, color: "#fff", border: "none", padding: "11px 18px", borderRadius: "10px", fontSize: "13px", fontWeight: "600", textDecoration: "none", transition: "all 0.2s", boxShadow: "0 2px 8px rgba(0,0,0,0.15)" }}
+              onMouseEnter={(e) => { e.currentTarget.style.transform = "translateY(-1px)"; e.currentTarget.style.boxShadow = "0 4px 14px rgba(0,0,0,0.25)"; }}
+              onMouseLeave={(e) => { e.currentTarget.style.transform = "translateY(0)"; e.currentTarget.style.boxShadow = "0 2px 8px rgba(0,0,0,0.15)"; }}>
               <GitHubIcon size={15} /> GitHub
+              <span style={{ fontSize: "16px", lineHeight: 1 }}>→</span>
             </a>
+
           </div>
         </div>
       </div>
@@ -294,70 +334,53 @@ function HomePage({ setActive }) {
       {/* BÜCHER */}
       <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5 }}>
         <div style={{ fontSize: "11px", fontWeight: "700", letterSpacing: "0.12em", textTransform: "uppercase", color: C.textSoft, marginBottom: "12px" }}>Lektüre</div>
-        <div style={{ display: "flex", gap: "0px", background: C.surface, border: `1px solid ${C.border}`, borderRadius: "14px", padding: "24px 28px", boxShadow: "0 1px 4px rgba(0,0,0,0.04)", alignItems: "flex-end", overflowX: "auto" }}>
-          {BOOKS.map((b, i) => (
-            <motion.div key={i} whileHover={{ y: -6, transition: { duration: 0.15 } }}
-              style={{ display: "flex", flexDirection: "column", alignItems: "center", marginRight: i < BOOKS.length - 1 ? "6px" : 0, flexShrink: 0 }}>
+        <div style={{ display: "grid", gridTemplateColumns: "auto 1fr", gap: "28px", background: C.surface, border: `1px solid ${C.border}`, borderRadius: "14px", padding: "24px 28px", boxShadow: "0 1px 4px rgba(0,0,0,0.04)", alignItems: "center" }}>
 
-              <a href={b.buyUrl} target="_blank" rel="noopener noreferrer"
-                title={`${b.title} kaufen`}
-                style={{ display: "block", textDecoration: "none", cursor: "pointer" }}>
-                <div style={{
-                  width: "36px",
-                  height: `${110 + (i % 3) * 16}px`,
-                  background: b.spine,
-                  borderRadius: "3px 2px 2px 3px",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  boxShadow: "2px 2px 6px rgba(0,0,0,0.15), inset -2px 0 4px rgba(0,0,0,0.12)",
-                  position: "relative",
-                  overflow: "hidden",
-                  transition: "filter 0.15s",
-                }}
-                  onMouseEnter={e => e.currentTarget.style.filter = "brightness(1.15)"}
-                  onMouseLeave={e => e.currentTarget.style.filter = "brightness(1)"}
-                >
-                  <span style={{
-                    writingMode: "vertical-rl",
-                    textOrientation: "mixed",
-                    transform: "rotate(180deg)",
-                    fontSize: "9px",
-                    fontWeight: "700",
-                    color: "rgba(255,255,255,0.9)",
-                    padding: "6px 2px",
-                    lineHeight: 1.3,
-                    textAlign: "center",
-                    maxHeight: "90%",
-                    overflow: "hidden",
-                  }}>
-                    {b.title}
-                  </span>
-                  <div style={{ position: "absolute", top: 0, left: 0, width: "6px", height: "100%", background: "rgba(255,255,255,0.15)", borderRadius: "3px 0 0 3px" }} />
-                </div>
-              </a>
-
-              <div style={{ marginTop: "8px", width: "36px", textAlign: "center" }}>
-                <div style={{ fontSize: "8px", color: C.textSoft, lineHeight: 1.3, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap", maxWidth: "60px", transform: "translateX(-12px)" }}>
-                  {b.author.split("–")[0].trim()}
-                </div>
-              </div>
-            </motion.div>
-          ))}
-          <div style={{ marginLeft: "24px", flex: 1, minWidth: "140px" }}>
-            <div style={{ fontSize: "12px", fontWeight: "700", color: C.textMid, marginBottom: "6px" }}>Leseliste</div>
-            <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
-              {BOOKS.map((b, i) => (
-                <li key={i} style={{ fontSize: "11px", color: C.textSoft, marginBottom: "4px", display: "flex", alignItems: "flex-start", gap: "6px" }}>
-                  <span style={{ width: "8px", height: "8px", borderRadius: "2px", background: b.spine, flexShrink: 0, marginTop: "2px", display: "inline-block" }} />
-                  <span>
-                    <a href={b.buyUrl} target="_blank" rel="noopener noreferrer"
-                      style={{ fontWeight: "600", color: C.textMid, textDecoration: "none" }}
-                      onMouseEnter={e => e.currentTarget.style.color = C.accent}
-                      onMouseLeave={e => e.currentTarget.style.color = C.textMid}>
+          {/* Bücher-Rücken */}
+          <div style={{ display: "flex", gap: "6px", alignItems: "flex-end" }}>
+            {BOOKS.map((b, i) => (
+              <motion.div key={i} whileHover={{ y: -6, transition: { duration: 0.15 } }}
+                style={{ display: "flex", flexDirection: "column", alignItems: "center", flexShrink: 0 }}>
+                <a href={b.buyUrl} target="_blank" rel="noopener noreferrer"
+                  title={`${b.title} kaufen`}
+                  style={{ display: "block", textDecoration: "none", cursor: "pointer" }}>
+                  <div style={{
+                    width: "36px", height: `${110 + (i % 3) * 16}px`, background: b.spine,
+                    borderRadius: "3px 2px 2px 3px", display: "flex", alignItems: "center", justifyContent: "center",
+                    boxShadow: "2px 2px 6px rgba(0,0,0,0.15), inset -2px 0 4px rgba(0,0,0,0.12)",
+                    position: "relative", overflow: "hidden", transition: "filter 0.15s",
+                  }}
+                    onMouseEnter={e => e.currentTarget.style.filter = "brightness(1.15)"}
+                    onMouseLeave={e => e.currentTarget.style.filter = "brightness(1)"}>
+                    <span style={{ writingMode: "vertical-rl", textOrientation: "mixed", transform: "rotate(180deg)", fontSize: "9px", fontWeight: "700", color: "rgba(255,255,255,0.9)", padding: "6px 2px", lineHeight: 1.3, textAlign: "center", maxHeight: "90%", overflow: "hidden" }}>
                       {b.title}
-                    </a>{" "}· {b.author}
-                  </span>
+                    </span>
+                    <div style={{ position: "absolute", top: 0, left: 0, width: "6px", height: "100%", background: "rgba(255,255,255,0.15)", borderRadius: "3px 0 0 3px" }} />
+                  </div>
+                </a>
+                <div style={{ marginTop: "8px", width: "36px", textAlign: "center" }}>
+                  <div style={{ fontSize: "8px", color: C.textSoft, lineHeight: 1.3, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap", maxWidth: "60px", transform: "translateX(-12px)" }}>
+                    {b.author.split("–")[0].trim()}
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+          {/* Leseliste */}
+          <div style={{ width: "100%" }}>
+            {/* <div style={{ fontSize: "12px", fontWeight: "700", color: C.textMid, marginBottom: "6px" }}>Leseliste</div> */}
+            <ul style={{ listStyle: "none", padding: 0, margin: 0, width: "100%" }}>
+              {BOOKS.map((b, i) => (
+                <li key={i} style={{ fontSize: "11px", color: C.textSoft, marginBottom: "8px", display: "flex", alignItems: "center", gap: "8px" }}>
+                  <span style={{ width: "8px", height: "8px", borderRadius: "2px", background: b.spine, flexShrink: 0, display: "inline-block" }} />
+                  <a href={b.buyUrl} target="_blank" rel="noopener noreferrer"
+                    style={{ fontWeight: "600", color: C.textMid, textDecoration: "none", flexShrink: 0 }}
+                    onMouseEnter={e => e.currentTarget.style.color = C.accent}
+                    onMouseLeave={e => e.currentTarget.style.color = C.textMid}>
+                    {b.title}
+                  </a>
+                  <span style={{ flex: 1, borderBottom: `1px dashed ${C.border}`, margin: "0 6px" }} />
+                  <span style={{ flexShrink: 0, color: C.textSoft }}>{b.author}</span>
                 </li>
               ))}
             </ul>
@@ -406,7 +429,7 @@ function GitHubStrip() {
       {loading ? (
         <div style={{ fontSize: "12px", color: C.textSoft, padding: "8px 0" }}>Lade Repositories…</div>
       ) : repos.length > 0 ? (
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(240px, 1fr))", gap: "10px" }}>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "10px" }}>
           {repos.map((repo) => (
             <a key={repo.id} href={repo.html_url} target="_blank" rel="noopener noreferrer"
               style={{ display: "block", padding: "12px 14px", background: C.surfaceAlt, borderRadius: "9px", border: `1px solid ${C.border}`, textDecoration: "none", transition: "border-color 0.15s" }}
@@ -460,22 +483,44 @@ function ProjectsPage() {
   }
 
   return (
-    <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -12 }} transition={{ duration: 0.35 }}>
+    <motion.div initial={{ opacity: 0, y: 0 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -12 }} transition={{ duration: 0.35 }}>
+      <div style={{ fontSize: "11px", fontWeight: "700", letterSpacing: "0.12em", textTransform: "uppercase", color: C.textSoft, marginBottom: "4px", textAlign: "left" }}>Portfolio</div>
       {/* ── PPTX SHOWCASE ── */}
       <div style={{ background: C.surface, border: `1px solid ${C.border}`, borderRadius: "14px", overflow: "hidden", marginBottom: "24px", boxShadow: "0 1px 6px rgba(0,0,0,0.05)" }}>
         <div style={{ padding: "12px 20px", borderBottom: `1px solid ${C.border}`, display: "flex", alignItems: "center", gap: "8px", background: C.surfaceAlt }}>
-          <span>📊</span>
+          <span>💻</span>
           <span style={{ fontSize: "13px", fontWeight: "700", color: C.text }}>Portfolio Präsentation</span>
           <a href="/projects.pptx" download
             style={{ marginLeft: "auto", fontSize: "11px", color: C.accent, textDecoration: "none", padding: "3px 10px", borderRadius: "5px", border: `1px solid ${C.accentBorder}`, fontWeight: "600" }}>
             ↓ Download
           </a>
+
         </div>
         <iframe
           src="https://view.officeapps.live.com/op/embed.aspx?src=https://hendrik-stolzke.vercel.app/projects.pptx"
           style={{ width: "100%", height: "500px", border: "none", display: "block" }}
           title="Portfolio Präsentation"
         />
+      </div>
+
+      {/* ── FILTER + TITEL ── */}
+      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", flexWrap: "wrap", gap: "12px", marginBottom: "22px" }}>
+        <div>
+          <h2 style={{ fontSize: "22px", fontWeight: "800", color: C.text, margin: 0 }}>Projekte ({visible.length})</h2>
+        </div>
+        <div style={{ display: "flex", gap: "6px", flexWrap: "wrap" }}>
+          {tags.map((t) => (
+            <button key={t} onClick={() => setFilter(t)} style={{
+              background: filter === t ? (t === "Alle" ? C.surfaceAlt : TAG_BG[t]) : "transparent",
+              border: `1px solid ${filter === t ? (t === "Alle" ? C.borderStrong : TAG_BORDER[t]) : C.border}`,
+              color: filter === t ? TAG_COLORS[t] : C.textSoft,
+              padding: "5px 14px", borderRadius: "8px", cursor: "pointer",
+              fontSize: "12px", fontWeight: "600", transition: "all 0.15s",
+            }}>
+              {t}
+            </button>
+          ))}
+        </div>
       </div>
 
       <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))", gap: "12px" }}>
@@ -488,6 +533,7 @@ function ProjectsPage() {
           />
         ))}
       </div>
+
     </motion.div>
   );
 }
@@ -542,17 +588,17 @@ function ProjectCard({ p, i, files, onUpload, onSelect, expanded }) {
           {p.tech.map((t) => (
             <span key={t} style={{ fontSize: "11px", padding: "3px 8px", borderRadius: "5px", background: C.surfaceAlt, color: C.textSoft, border: `1px solid ${C.border}`, fontWeight: "500" }}>{t}</span>
           ))}
+          {p.github && (
+            <a href={`https://github.com/${p.github}`} target="_blank" rel="noopener noreferrer"
+              style={{ fontSize: "11px", padding: "3px 8px", borderRadius: "5px", background: C.surfaceAlt, color: C.textSoft, border: `1px solid ${C.border}`, fontWeight: "500", textDecoration: "none", display: "inline-flex", alignItems: "center", gap: "4px" }}
+              onMouseEnter={(e) => { e.currentTarget.style.borderColor = C.accent; e.currentTarget.style.color = C.accent; }}
+              onMouseLeave={(e) => { e.currentTarget.style.borderColor = C.border; e.currentTarget.style.color = C.textSoft; }}>
+              <GitHubIcon size={11} /> GitHub
+            </a>
+          )}
         </div>
 
-        {/* Action row */}
-        <div style={{ display: "flex", gap: "8px", alignItems: "center" }}>
-          <a href={`https://github.com/${GITHUB_USER}`} target="_blank" rel="noopener noreferrer"
-            style={{ display: "inline-flex", alignItems: "center", gap: "5px", fontSize: "11px", fontWeight: "600", color: C.textMid, textDecoration: "none", padding: "5px 10px", borderRadius: "7px", border: `1px solid ${C.border}`, background: C.surfaceAlt, transition: "border-color 0.15s, color 0.15s" }}
-            onMouseEnter={(e) => { e.currentTarget.style.borderColor = C.accent; e.currentTarget.style.color = C.accent; }}
-            onMouseLeave={(e) => { e.currentTarget.style.borderColor = C.border; e.currentTarget.style.color = C.textMid; }}>
-            <GitHubIcon size={12} /> GitHub
-          </a>
-        </div>
+        {/* Action row — leer, kann entfernt werden */}
 
         {/* File previews */}
         <AnimatePresence>
@@ -612,7 +658,7 @@ function PptxPreview({ file }) {
 // ─── CV ───────────────────────────────────────────────────────────────────────
 function CVPage() {
   return (
-    <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -12 }} transition={{ duration: 0.35 }}>
+    <motion.div initial={{ opacity: 0, y: 0 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -12 }} transition={{ duration: 0.35 }}>
       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", marginBottom: "18px", flexWrap: "wrap", gap: "12px" }}>
         <div>
           <div style={{ fontSize: "11px", fontWeight: "700", letterSpacing: "0.12em", textTransform: "uppercase", color: C.textSoft, marginBottom: "4px" }}>Dokument</div>
@@ -626,12 +672,11 @@ function CVPage() {
         </a>
       </div>
 
-      <div style={{ background: C.surface, border: `1px solid ${C.border}`, borderRadius: "14px", overflow: "hidden", boxShadow: "0 1px 6px rgba(0,0,0,0.05)", userSelect: "none", WebkitUserSelect: "none", pointerEvents: "none" }}>
+      <div style={{ background: C.surface, border: `1px solid ${C.border}`, borderRadius: "14px", overflow: "hidden", boxShadow: "0 1px 6px rgba(0,0,0,0.05)" }}>
         <iframe
           src="/cv.pdf#toolbar=0&navpanes=0&scrollbar=1&view=FitH"
           title="Lebenslauf"
-          style={{ width: "100%", height: "820px", border: "none", display: "block", pointerEvents: "auto" }}
-          sandbox="allow-same-origin allow-scripts"
+          style={{ width: "100%", height: "820px", border: "none", display: "block" }}
         />
       </div>
     </motion.div>
